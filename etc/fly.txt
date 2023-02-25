@@ -1,0 +1,209 @@
+sallectapython3.9 mtkhacker.py printgpt
+MTK Hacker V0.0.0 (fork of MTK Flash/Exploit Client V1.6.1 (c) B.Kerler 2018-2023)
+
+MTK Hacker:debug:mtkhacker[821]: Starting MTKHacker_main instance...
+MTK Hacker:debug:main_module[184]: started
+MTK Hacker:debug:main_module[202]: mtkhacker.pysys.argv is printgpt
+MTK Hacker:debug:main_module[205]: command is printgpt
+MTK Hacker:debug:main_module[467]: Else command is printgpt
+MTK Hacker:debug:main_module[470]: preloader is None
+MTK Hacker:info:mtk_preloader[131]: Waiting for PreLoader VCOM, please reconnect mobile to BROM mode
+MTK Hacker:info:connect_module[68]: 
+
+  Hint:
+
+    Power off the phone before connecting.
+
+    For BROM mode, press and hold vol up, vol dwn, 
+      or all hw buttons and connect usb.
+
+    For Preloader mode, don't press any hw button 
+      and connect usb.
+    If it is already connected and on, 
+      hold power for 10 seconds to reset.
+
+MTK Hacker:info:usblib[275]: Device detected, getting configuration...
+MTK Hacker:info:usblib[288]: Got device configuration. Getting interface...
+MTK Hacker:debug:usblib[308]: Detaching kernel driver
+MTK Hacker:info:connect_module[59]: Device detected :)
+MTK Hacker:info:connect_module[85]: Connected at attempt No 20
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: rdword:0x4
+MTK Hacker:info:mtk_preloader[159]: 	CPU:			MT6582/MT6574/MT8382()
+MTK Hacker:info:mtk_preloader[161]: 	HW version:		0x0
+MTK Hacker:info:mtk_preloader[162]: 	WDT:			0x10007000
+MTK Hacker:info:mtk_preloader[163]: 	Uart:			0x11002000
+MTK Hacker:info:mtk_preloader[164]: 	Brom payload addr:	0x100a00
+MTK Hacker:info:mtk_preloader[165]: 	DA payload addr:	0x201000
+MTK Hacker:info:mtk_preloader[168]: 	Var1:			0xa
+MTK Hacker:info:mtk_preloader[172]: Disabling Watchdog...
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:info:mtk_preloader[175]: HW code:			0x6582
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: rbyte:0x6
+MTK Hacker:info:mtk_preloader[413]: Target config:		0x0
+MTK Hacker:info:mtk_preloader[414]: 	SBC enabled:		False
+MTK Hacker:info:mtk_preloader[415]: 	SLA enabled:		False
+MTK Hacker:info:mtk_preloader[416]: 	DAA enabled:		False
+MTK Hacker:info:mtk_preloader[417]: 	SWJTAG enabled:		False
+MTK Hacker:info:mtk_preloader[418]: 	EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:	False
+MTK Hacker:info:mtk_preloader[419]: 	Root cert required:	False
+MTK Hacker:info:mtk_preloader[420]: 	Mem read auth:		False
+MTK Hacker:info:mtk_preloader[421]: 	Mem write auth:		False
+MTK Hacker:info:mtk_preloader[422]: 	Cmd 0xC8 blocked:	False
+MTK Hacker:info:mtk_preloader[177]: Get Target info
+MTK Hacker:debug:usblib[452]: get_blver:0x1
+MTK Hacker:info:mtk_preloader[395]: BROM mode detected.
+MTK Hacker:debug:usblib[452]: get_bromver:0x1
+MTK Hacker:debug:usblib[452]: mtk_cmd:0x1
+MTK Hacker:debug:usblib[452]: mtk_cmd:0x8
+MTK Hacker:info:mtk_preloader[189]: 	HW subcode:		0x8a00
+MTK Hacker:info:mtk_preloader[190]: 	HW Ver:			0xca01
+MTK Hacker:info:mtk_preloader[191]: 	SW Ver:			0x1
+MTK Hacker:debug:usblib[452]: get_meid:0x1
+MTK Hacker:debug:usblib[452]: get_meid:0x1
+MTK Hacker:debug:usblib[452]: get_meid:0x4
+MTK Hacker:debug:usblib[452]: get_meid:0x10
+MTK Hacker:debug:usblib[452]: get_meid:0x2
+MTK Hacker:info:mtk_preloader[196]: ME_ID:			172A8AC0D64E847D623F8FA2D069E86E
+MTK Hacker:info:download_agent_module[95]: Device is unprotected.
+MTK Hacker:info:download_agent_module[99]: Device is in BROM mode. Bypassing security.
+MTK Hacker:info:pltools[54]: Loading payload from mt6582_payload.bin, 0x258 bytes
+MTK Hacker:info:pltools[93]: Kamakiri / DA Run
+MTK Hacker:info:kamakiri[139]: Trying kamakiri2..
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: brom_register_access:0x1
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rdword:0x4
+MTK Hacker:debug:usblib[452]: read:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: brom_register_access:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: brom_register_access:0x1
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rdword:0x4
+MTK Hacker:debug:usblib[452]: read:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: brom_register_access:0x1
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rdword:0x4
+MTK Hacker:debug:usblib[452]: read:0x2
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: brom_register_access:0x2
+MTK Hacker:info:kamakiri[141]: Done sending payload...
+MTK Hacker:debug:usblib[452]: runpayload:0x4
+MTK Hacker:info:pltools[99]: Successfully sent payload: /media/data/dev/git/mtkhacker/media/mtk/payloads/mt6582_payload.bin
+MTK Hacker:info:connect_module[59]: Device detected :)
+MTK Hacker:warning:download_agent_module[104]: Device is in BROM mode. No preloader given, trying to dump preloader from RAM.
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rdword:0x10000
+MTK Hacker:debug:usblib[452]: read:0x2
+MTK Hacker:error:download_agent_module[68]: idx not found.
+MTK Hacker:error:download_agent_module[108]: Failed to dump preloader from RAM.
+MTK Hacker:info:mtk_dalegacy[1129]: Uploading legacy da...
+MTK Hacker:info:mtk_dalegacy[1025]: Uploading legacy stage 1 from MTK_AllInOne_DA_5.1824.bin
+MTK Hacker:warning:legacy_ext[48]: Legacy address check not patched.
+MTK Hacker:warning:legacy_ext[76]: Legacy DA2 CMD F0 not patched.
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: echo:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:info:mtk_preloader[434]: Jumping to 0x200000
+MTK Hacker:debug:usblib[452]: echo:0x1
+MTK Hacker:debug:usblib[452]: rdword:0x4
+MTK Hacker:debug:usblib[452]: rword:0x2
+MTK Hacker:info:mtk_preloader[453]: Jumping to 0x200000: ok.
+MTK Hacker:debug:usblib[452]: upload:0x1
+MTK Hacker:info:mtk_dalegacy[1063]: Got loader sync!
+MTK Hacker:info:mtk_dalegacy[1068]: Reading nand info
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:mtk_dalegacy[1070]: NAND_INFO: 0xbc4
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:debug:usblib[452]: upload:0x2
+MTK Hacker:info:mtk_dalegacy[1076]: Reading emmc info
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:mtk_dalegacy[1078]: EMMC_INFO: 0x0
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:usblib[452]: upload:0x4
+MTK Hacker:debug:usblib[452]: upload:0x1
+MTK Hacker:debug:usblib[452]: upload:0x1
+MTK Hacker:debug:usblib[452]: upload:0x1
+MTK Hacker:debug:mtk_dalegacy[1095]: ACK: 040287
+MTK Hacker:info:mtk_dalegacy[1096]: Setting stage 2 config ...
+MTK Hacker:debug:mtk_dalegacy[843]: hwcode is 0x6582
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x4
+MTK Hacker:info:mtk_dalegacy[895]: Received Stage2 dram info.
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x4
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x10
+MTK Hacker:info:mtk_dalegacy[903]: DRAM config needed for : 45010053454d303447905323314d5035
+MTK Hacker:info:mtk_dalegacy[905]: Searching preloader...
+MTK Hacker:info:mtk_dalegacy[913]: Found preloader: preloader_mbk72_wet_jb3.bin
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x4
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:info:mtk_dalegacy[921]: Reading dram nand info ...
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x2
+MTK Hacker:debug:usblib[452]: set_stage2_config:0x1
+MTK Hacker:info:mtk_dalegacy[936]: Sending dram info ...
+MTK Hacker:debug:mtk_dalegacy[938]: EMI version is 0xb
+MTK Hacker:error:usblib[437]: USB Timed out
+MTK Hacker:error:usblib[446]: USB Input/Output error
+

@@ -1,0 +1,78 @@
+
+#from mtkclient.config.payloads import pathconfig
+from mtkhacker_modules.path_module import MTKHhacker_path
+or
+from mtkhacker_modules.path_module import MTKHhacker_path as mtkhacker_path
+
+pathconfig()
+MTKHhacker_path()
+
+pathconfig
+mtkhhacker_path
+
+get_loader_path()
+loaders
+
+get_payloads_path()
+payloads
+
+self.path.get_payloads_path()
+self.path.payloads
+
+*****
+mtkclient/Library/settings.py
+mtkhacker_modules/hwparam_module.py
+
+from mtkclient.Library.settings import hwparam
+from mtkhacker_modules.hwparam_module import hwparam
+
+= hwparam
+= MTKHhacker_hwparam
+
+*****
+.state
+device.txt
+self.path.devicefile
+
+******
+
+from mtkclient.Library.mtk_main import Main, metamodes
+from mtkhacker_modules.main_module import MTKHacker_main
+from mtkclient.Library.mtk_main import metamodes
+
+
+from mtkclient.Library.mtk_main import Main, Mtk_Config
+from mtkhacker_modules.main_module import MTKHacker_main
+from mtkclient.Library.mtk_main import Mtk_Config
+
+**********
+from mtkclient.Library.mtk_da_cmd import DA_handler
+from mtkhacker_modules.download_agent_module import MTKHacker_Download_Agent
+
+******
+MTKHhacker_app
+MTKHhacker_meta
+from mtkhacker_modules.meta_module import MTKHhacker_meta
+or
+from mtkhacker_modules.meta_module import MTKHhacker_meta as mtkhacker_meta
+
+******
+Port
+MTKHhacker_connect
+
+from mtkclient.Library.Port import Port
+from mtkhacker_modules.connect_module import MTKHhacker_connect
+
+
+***********
+from mtkclient.Library.Connection.devicehandler import DeviceClass
+from mtkhacker_modules.
+
+
+**********
+
+from mtkhacker_modules.logger_module import MTKHacker_logger as logger
+
+******
+
+logger.exit()
