@@ -1,6 +1,6 @@
 # MTKHacker
 https://github.com/sallecta/mtkhacker
-This app is not intended to genearal use. Try following original app.
+This app is not intended for genearal use. Try original MTKClient.
 MTKHacker is fork of MTKClient (https://github.com/bkerler/mtkclient).
 See README_(mtkclient).md for details.
 
