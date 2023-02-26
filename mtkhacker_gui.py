@@ -17,9 +17,9 @@ from PySide6.QtWidgets import QMainWindow, QApplication, QWidget, QCheckBox, QVB
                             QPushButton
 
 from mtkclient.Library.mtk_class import Mtk
-from mtkhacker_modules.download_agent_module import MTKHacker_Download_Agent
+from mtkh_modules.da.mtkh_da import MTKH_DA
 from mtkclient.Library.gpt import gpt_settings
-from mtkhacker_modules.mtkhacker_main import MTKHacker_main
+from mtkh_modules.mtkh_main import MTKH_main
 from mtkclient.Library.mtk_main import Mtk_Config
 
 from mtkclient.gui.readFlashPartitions import ReadFlashWindow
@@ -30,7 +30,7 @@ from mtkclient.gui.toolkit import asyncThread, trap_exc_during_debug, convert_si
 from mtkclient.gui.main_gui import Ui_MainWindow
 import os
 from mtkhacker_modules.meta_module import MTKHhacker_meta as mtkhacker_meta
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 mtkhacker_path = MTKH_path(__file__)
 
 lock = threading.Lock()
@@ -47,7 +47,7 @@ variables.debugmode = True
 # path = pathconfig()
 # if sys.platform.startswith('darwin'):
 #    config.ptype = "kamakiri" #Temp for Mac testing
-MtkTool = MTKHacker_main(variables)
+MtkTool = MTKH_main(variables)
 
 guiState = "welcome"
 phoneInfo = {"chipset": "", "bootMode": "", "daInit": False, "cdcInit": False}
@@ -65,7 +65,7 @@ class DeviceHandler(QObject):
                             update_status_text=self.update_status_text)
         config.gpt_settings = gpt_settings(gpt_num_part_entries='0', gpt_part_entry_size='0',
                                            gpt_part_entry_start_lba='0')  # This actually sets the right GPT settings..
-        self.download_agent = MTKHacker_Download_Agent(Mtk(config))
+        self.download_agent = MTKH_DA(Mtk(config))
 
 
 

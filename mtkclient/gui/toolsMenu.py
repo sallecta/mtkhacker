@@ -1,7 +1,10 @@
 from PySide6.QtCore import Slot, QObject, Signal
 from PySide6.QtWidgets import QTableWidget, QTableWidgetItem
+
+
+from mtkh_modules.mtkh_vars import MTKH_vars as vars
 from mtkclient.gui.toolkit import trap_exc_during_debug, asyncThread, FDialog
-from mtkhacker_modules.download_agent_module import MTKHacker_Download_Agent
+from mtkh_modules.da.mtkh_da import MTKH_DA
 import os
 import sys
 import json
@@ -61,8 +64,7 @@ class generateKeysMenu(QObject):
 
     @Slot()
     def updateKeys(self):
-        path = os.path.join(self.hwparamFolder, "hwparam.json")
-        self.ui.keystatuslabel.setText(self.tr(f"Keys saved to {path}."))
+        self.ui.keystatuslabel.setText(self.tr(f"Keys saved to {vars.path.hwparamfile}."))
         keycount = len(self.parent.Status['result'])
         self.ui.keytable.setRowCount(keycount)
         self.ui.keytable.setColumnCount(2)
@@ -78,15 +80,8 @@ class generateKeysMenu(QObject):
         self.enableButtonsSignal.emit()
 
     def generateKeys(self):
-        self.ui.keystatuslabel.setText(self.tr("Generating..."))
-        hwparamFolder = self.fdialog.opendir(self.tr("Select output directory"))
-        if hwparamFolder == "" or hwparamFolder is None:
-            self.parent.enablebuttons()
-            return
-        else:
-            self.mtkClass.config.set_hwparam_path(hwparamFolder)
-        self.hwparamFolder = hwparamFolder
-        thread = asyncThread(self.parent, 0, self.generateKeysAsync, [hwparamFolder])
+        self.ui.keystatuslabel.setText(self.tr("Generating keys..."))
+        thread = asyncThread(self.parent, 0, self.generateKeysAsync, [])
         thread.sendToLogSignal.connect(self.sendToLog)
         thread.sendUpdateSignal.connect(self.updateKeys)
         thread.start()
@@ -98,7 +93,7 @@ class generateKeysMenu(QObject):
         toolkit.sendToLogSignal.emit(self.tr("Generating keys"))
         res = self.mtkClass.daloader.keys()
         if res:
-            with open(os.path.join(parameters[0],"hwparam.json"),"w") as wf:
+            with open(vars.path.hwparamfile,"w") as wf:
                 wf.write(json.dumps(res))
         self.parent.Status["result"] = res
         self.parent.Status["done"] = True

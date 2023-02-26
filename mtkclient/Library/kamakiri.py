@@ -9,8 +9,8 @@ from struct import pack, unpack
 
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger
 from mtkclient.Library.utils import print_progress, revdword, getint
-from mtkclient.Library.Connection.usblib import usb
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.connect.usb.mtkh_connect_usb import MTKH_connect_USB
+from mtkh_modules.path.mtkh_path import MTKH_path
 
 
 class Kamakiri():

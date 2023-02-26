@@ -3,7 +3,7 @@ import os
 from struct import unpack, pack
 
 #from mtkclient.config.payloads import pathconfig
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.config.brom_config import efuse
 from mtkclient.Library.error import ErrorHandler, ErrorCodes_XFlash
 from mtkclient.Library.hwcrypto import crypto_setup, hwcrypto

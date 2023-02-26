@@ -1,0 +1,91 @@
+mtkhacker_main:
+	+13: __init__: check mtkhacker_path.logs
+	+218: run: Mtk_Config(arg_gui=None, guiprogress=None, arg_update_status_text=None)
+		16: mtk_config: Mtk_Config: __init__:
+			self.peek = None
+			self.gui = arg_gui
+			self.guiprogress = arg_guiprogress
+			self.update_status_text = arg_update_status_text
+			self.pid = -1
+			self.cid = None
+			self.vid = -1
+			self.var1 = 0xA
+			self.is_brom = False
+			self.skipwdt = False
+			self.interface = -1
+			self.readsocid = False
+			self.enforcecrash = False
+			self.debugmode = False
+			self.preloader = None
+			self.preloader_filename = None
+			self.payloadfile = None
+			self.loader = None
+			self.gpt_file = None
+			self.tr = QObject().tr
+			if sys.platform.startswith('darwin'):
+				self.ptype = "kamakiri"
+			else:
+				self.ptype = "kamakiri2"
+			self.generatekeys = None
+			self.daconfig = None
+			self.bmtflag = None
+			self.bmtblockcount = None
+			self.bmtpartsize = None
+			self.packetsizeread = 0x400
+			self.flashinfo = None
+			self.readsize = 0
+			self.sparesize = 16
+			self.plcap = None
+			self.blver = -2
+			self.gcpu = None
+			self.pagesize = 512
+			self.SECTOR_SIZE_IN_BYTES = 4096  # fixme
+			self.baudrate = 115200
+			self.cpu = ""
+			self.hwcode = None
+			self.meid = None
+			self.socid = None
+			self.target_config = None
+			self.chipconfig = chipconfig()
+			self.gpt_settings = None
+			self.hwparam = None
+			self.hwparam_path = "logs"
+			self.sram = None
+			self.dram = None
+				205:brom_config:chipconfig:__init__
+					self.var1 = arg var1=None
+					self.watchdog = arg watchdog = None
+					self.uart = arg uart = None
+					self.brom_payload_addr = arg brom_payload_addr = None
+					self.da_payload_addr = arg da_payload_addr = None
+					self.pl_payload_addr = arg pl_payload_addr = None
+					self.cqdma_base = cqdma_base = None
+					self.sej_base = arg sej_base = None
+					self.dxcc_base = arg dxcc_base = None
+					self.gcpu_base = arg gcpu_base = None
+					self.ap_dma_mem = arg ap_dma_mem = None
+					self.name = arg name = ""
+					self.description = arg description = ""
+					self.dacode = arg dacode = None
+					self.meid_addr = arg meid_addr = None
+					self.socid_addr = arg socid_addr = None
+					self.blacklist = arg blacklist = emty tuple = ()
+					self.blacklist_count = arg blacklist_count = None
+					self.send_ptr = arg send_ptr = None
+					self.ctrl_buffer = arg ctrl_buffer = emty tuple = ()
+					self.cmd_handler = arg cmd_handler = None
+					self.brom_register_access = brom_register_access = None
+					self.damode = arg damode = brom_config damodes.DEFAULT (DEFAULT = 0, XFLASH = 1)
+					self.loader = arg loader = None
+					self.prov_addr = arg prov_addr = None
+					self.misc_lock = arg misc_lock = None
+					self.efuse_addr = arg efuse_addr = None
+	?+219:ArgHandler(self.args, config)
+	+220:self.eh = ErrorHandler()
+	?223:serialport = self.args.serialport
+	226:mtkhacker_main:Mtk:__init__(... arg_setup=True):
+		37-51: sett vid pid from args or default ids
+		52:self.connect = MTKHhacker_connect(self, portconfig, serialportname)
+		53:Preloader
+		***
+	227:config.set_peek(mtk.daloader.peek)

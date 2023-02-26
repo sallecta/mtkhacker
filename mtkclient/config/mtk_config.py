@@ -62,7 +62,6 @@ class Mtk_Config:
         self.chipconfig = chipconfig()
         self.gpt_settings = None
         self.hwparam = None
-        self.hwparam_path = "logs"
         self.sram = None
         self.dram = None
 
@@ -120,10 +119,6 @@ class Mtk_Config:
                     self.socid = self.peek(0x1008ec, 0x20)
                     self.set_socid(self.socid)
         return self.socid
-
-    def set_hwparam_path(self, path):
-        if path is not None:
-            self.hwparam_path = path
 
     def default_values(self, hwcode):
         if self.chipconfig.var1 is None:

@@ -30,48 +30,53 @@ class MTKH_logger:
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
 		if arg_opt == 'sameline':
-			print(f"{n}:info:{f}[{l}]: {arg_msg}", end='\r')
+			print(f"{n}:info:{f}:{m}[{l}]: {arg_msg}", end='\r')
 		else:
-			print(f"{n}:info:{f}[{l}]: {arg_msg}")
+			print(f"\n{n}:info:{f}:{m}[{l}]: \n  {arg_msg}\n")
 		sys.stdout.flush()
 	
 	def debug(arg_msg, arg_opt=None):
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
-		print(f"{this.cyan}{n}:debug{this.end}:{f}[{l}]: {arg_msg}")
+		print(f"\n{this.cyan}{n}:debug{this.end}:{f}:{m}[{l}]: \n  {arg_msg}\n")
 		sys.stdout.flush()
 	
 	def warning(arg_msg, arg_opt=None):
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
-		print(f"{this.yellow}{n}:warning{this.end}:{f}[{l}]: {arg_msg}")
+		print(f"\n{this.yellow}{n}:warning{this.end}:{f}:{m}[{l}]: \n  {arg_msg}\n")
 		sys.stdout.flush()
 	
 	def error(arg_msg, arg_opt=None):
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
-		print(f"{this.red}{n}:error{this.end}:{f}[{l}]: {arg_msg}")
+		print(f"\n{this.red}{n}:error{this.end}:{f}:{m}[{l}]: \n  {arg_msg}\n")
 		sys.stdout.flush()
 	
 	def critical(arg_msg, arg_opt=None):
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
-		print(f"{this.redbold}{n}:critical{this.end}:{f}[{l}]: {arg_msg}")
+		print(f"\n{this.redbold}{n}:critical{this.end}:{f}:{m}[{l}]: \n  {arg_msg}\n")
 		sys.stdout.flush()
 	
 	def exit(arg_msg=None, arg_opt=None):
@@ -81,9 +86,10 @@ class MTKH_logger:
 		frameinfo = getframeinfo(stack()[1][0])
 		n = mtkhacker_meta.name
 		f = os.path.basename(os.path.splitext(frameinfo.filename)[0])
+		m = frameinfo.function
 		l = frameinfo.lineno
 		this=MTKH_logger
-		print(f"{this.yellowbold}{n}{this.end}:{f}[{l}]: {msg}")
+		print(f"\n{this.yellowbold}{n}{this.end}:{f}:{m}[{l}]: \n  {msg}\n")
 		sys.stdout.flush()
 		sys.exit(0)
 	

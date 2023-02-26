@@ -1,7 +1,7 @@
 import json
 import os.path
 from binascii import hexlify
-from mtkhacker_modules.path_module import MTKH_path as mtkhacker_path
+from mtkh_modules.path.mtkh_path import MTKH_path as mtkhacker_path
 
 class MTKHhacker_hwparam:
 	paramsetting = None

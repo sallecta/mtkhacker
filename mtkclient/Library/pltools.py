@@ -5,12 +5,11 @@ import os
 import logging
 from binascii import hexlify
 from struct import pack, unpack
-#from mtkclient.config.payloads import pathconfig
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.Library.utils import print_progress
 from mtkclient.Library.hwcrypto import crypto_setup, hwcrypto
 from mtkclient.Library.kamakiri import Kamakiri
-from mtkhacker_modules.connect_module import MTKHhacker_connect
+from mtkh_modules.connect.mtkh_connect import MTKH_connect
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger
 
 
@@ -188,7 +187,7 @@ class PLTools:
                     logger.debug(str(e))
                     pass
                 portconfig = [[0xE8D, 0x0003, 1]]
-                mtk.connect = MTKHhacker_connect(mtk=mtk, portconfig=portconfig, serialportname=mtk.connect.serialportname)
+                mtk.connect = MTKH_connect(mtk=mtk, portconfig=portconfig, serialportname=mtk.connect.serialportname)
                 if mtk.preloader.init(maxtries=20):
                     break
         return mtk

@@ -7,7 +7,7 @@ import shutil
 from enum import Enum
 from struct import unpack, pack
 from binascii import hexlify
-from mtkhacker_modules.path_module import MTKH_path as mtkhacker_path
+from mtkh_modules.mtkh_vars import MTKH_vars as vars
 from mtkclient.Library.error import ErrorHandler
 import time
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger
@@ -118,10 +118,10 @@ class Preloader:
 		self.sendcmd = self.mtk.connect.mtk_cmd
 
 	def init(self, maxtries=None, display=True):
-		if os.path.exists(mtkhacker_path.devicefile):
+		if os.path.exists(vars.path.devicefile):
 			try:
-				os.remove(mtkhacker_path.devicefile)
-				os.remove(mtkhacker_path.hwparamfile)
+				os.remove(vars.path.devicefile)
+				os.remove(vars.path.hwparamfile)
 			except Exception as err:
 				logger.error(err)
 				pass

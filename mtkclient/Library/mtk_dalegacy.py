@@ -11,7 +11,7 @@ from mtkclient.Library.utils import structhelper
 from mtkclient.Library.error import ErrorHandler
 from mtkclient.Library.daconfig import DaStorage, EMMC_PartitionType
 from mtkclient.Library.partition import Partition
-from mtkhacker_modules.path_module import MTKH_path as mtkhacker_path
+from mtkh_modules.path.mtkh_path import MTKH_path as mtkhacker_path
 from mtkclient.Library.legacy_ext import legacyext
 from mtkclient.config.mtk_config import Mtk_Config
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger

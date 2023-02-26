@@ -2,7 +2,7 @@ import os
 from struct import unpack, pack
 
 from mtkhacker_modules.hwparam_module import MTKHhacker_hwparam
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.Library.error import ErrorHandler
 from mtkclient.Library.hwcrypto import crypto_setup, hwcrypto
 from mtkclient.Library.utils import progress, find_binary

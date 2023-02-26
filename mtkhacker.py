@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # MTK Flash Client (c) B.Kerler 2018-2022.
 # Licensed under GPLv3 License
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 mtkhacker_path = MTKH_path(__file__)
 import argparse
 
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger
-from mtkhacker_modules.mtkhacker_main import MTKHacker_main
+from mtkh_modules.mtkh_main import MTKH_main
 from mtkclient.Library.mtk_main import metamodes
 
 from mtkhacker_modules.meta_module import MTKHhacker_meta as mtkhacker_meta
@@ -821,5 +821,5 @@ if __name__ == '__main__':
     vars.args = parser.parse_args()
  
 
-    logger.debug("Starting MTKHacker_main instance...")
-    mtkhacker = MTKHacker_main(vars.args).run(parser)
+    logger.debug("Starting MTKH_main instance...")
+    mtkhacker = MTKH_main(vars.args).run(parser)

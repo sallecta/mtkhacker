@@ -5,7 +5,7 @@ import logging
 import os
 from struct import unpack
 from mtkclient.Library.utils import read_object
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.config.brom_config import damodes
 from mtkclient.Library.utils import structhelper
 

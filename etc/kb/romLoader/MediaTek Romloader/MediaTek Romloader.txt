@@ -1,0 +1,18 @@
+https://osmocom.org/projects/baseband/wiki/MTKRomloader
+
+MediaTek Romloader
+(Bootloader Tool)
+
+The MTK romloader is a serial bootstrap-loader inside the Digital Baseband Processors manufactured by MediaTek.
+It is executed when the power button of the phone is pressed, and listens on the UART for an 0xa0 activation byte.
+
+The loader can read/write from/to all registers and memory addresses of the DBB, which is used extensively by the host software.
+Most of the initialization logic is therefore in the application on the host, which uploads the code to the phone.
+
+It is stored in a ROM which is always mapped to 0x48000000 of the ARM memory space in the MT622x. Therefore, only one instruction is mapped to the reset vector at 0x0 when powering on:
+
+ROM:00000000                 LDR     PC, =0x48000000
+
+Osmocon has working support for it (-m mtk), but it uses the default 19200 baud for uploading the image to the SRAM.
+For higher loading baudrates the proprietary MTK windows flashing tool uses several register writes to enable the UART Autobaud mode, and sends an autobaud-sample.
+Just setting the baudrate the normal way would result in a deadlock, since when setting LCRr7 to 1 maps the baud divider registers to the RX and TX holding registers.

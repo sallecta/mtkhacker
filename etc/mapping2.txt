@@ -1,0 +1,8 @@
+ptype = payload type => payload /  exploit 
+kamakiri is another bootrom exploit for MediaTek devices 
+? ptype => bootrom_exploit
+
+?brom => bootrom
+
+efuse
+	base is efuse_addr

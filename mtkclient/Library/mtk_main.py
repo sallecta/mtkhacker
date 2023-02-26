@@ -8,7 +8,7 @@ import time
 from binascii import hexlify
 from struct import unpack, pack
 from mtkclient.Library.mtk_class import Mtk
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.Library.pltools import PLTools
 from mtkclient.Library.meta import META
 from mtkclient.Library.utils import getint

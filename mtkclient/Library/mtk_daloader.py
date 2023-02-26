@@ -15,12 +15,11 @@ from mtkclient.config.brom_config import damodes
 from mtkclient.Library.xflash_ext import xflashext
 from mtkclient.Library.legacy_ext import legacyext
 from mtkhacker_modules.hwparam_module import MTKHhacker_hwparam
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.mtkh_vars import MTKH_vars as vars
 
 
 class DAloader:
     def __init__(self, mtk):
-        self.path = MTKH_path()
         self.mtk = mtk
         self.config = mtk.config
         self.eh = ErrorHandler()
@@ -59,7 +58,7 @@ class DAloader:
             config["m_sdmmc_ua_size"] = self.da.sdc.m_sdmmc_ua_size
             config["m_nor_flash_size"] = self.da.nor.m_nor_flash_size
 
-        open(self.path.devicefile, "w").write(json.dumps(config))
+        open(vars.path.devicefile, "w").write(json.dumps(config))
 
     def compute_hash_pos(self, da1, da2, da2sig_len):
         hashlen = len(da2) - da2sig_len
@@ -96,8 +95,8 @@ class DAloader:
         return da1
 
     def reinit(self):
-        if os.path.exists(self.path.devicefile):
-            config = json.loads(open(self.path.devicefile, "r").read())
+        if os.path.exists(vars.path.devicefile):
+            config = json.loads(open(vars.path.devicefile, "r").read())
             self.config.hwcode = config["hwcode"]
             if "meid" in config:
                 self.config.meid = bytes.fromhex(config["meid"])

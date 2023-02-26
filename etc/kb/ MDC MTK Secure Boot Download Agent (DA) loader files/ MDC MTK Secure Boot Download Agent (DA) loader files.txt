@@ -1,0 +1,12 @@
+https://www.hovatek.com/forum/thread-37821.html
+
+MDC devices which have a Secure Bootloader 
+would give you authentication or 
+buffer errors when trying to flash 
+using SP flash tool.
+
+Dongles / Boxes like Infinity CM2 
+would throw a Secure Boot! error. 
+To flash such devices, 
+you'll need a MDC Secure Boot DA file. 
+It'll also come in handy when trying to bypass Factory Reset Protection (FRP) 

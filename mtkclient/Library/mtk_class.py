@@ -6,11 +6,11 @@ import logging
 from struct import unpack
 from mtkh_modules.logger.mtkh_logger import MTKH_logger as logger
 from mtkclient.config.usb_ids import default_ids
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.Library.pltools import PLTools
 from mtkclient.Library.mtk_preloader import Preloader
 from mtkclient.Library.mtk_daloader import DAloader
-from mtkhacker_modules.connect_module import MTKHhacker_connect
+from mtkh_modules.connect.mtkh_connect import MTKH_connect
 from mtkclient.Library.error import ErrorHandler
 
 
@@ -49,7 +49,7 @@ class Mtk:
 			portconfig = [[vid, pid, interface]]
 		else:
 			portconfig = default_ids
-		self.connect = MTKHhacker_connect(self, portconfig, serialportname)
+		self.connect = MTKH_connect(self, portconfig, serialportname)
 		self.preloader = Preloader(self)
 		self.daloader = DAloader(self)
 		

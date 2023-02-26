@@ -11,7 +11,7 @@ from mtkclient.Library.utils import progress
 from mtkclient.Library.error import ErrorHandler
 from mtkclient.Library.daconfig import EMMC_PartitionType, UFS_PartitionType, DaStorage
 from mtkclient.Library.partition import Partition
-from mtkhacker_modules.path_module import MTKH_path
+from mtkh_modules.path.mtkh_path import MTKH_path
 from mtkclient.Library.xflash_ext import xflashext, XCmd
 from mtkhacker_modules.hwparam_module import MTKHhacker_hwparam
 from queue import Queue
